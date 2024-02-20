@@ -3,6 +3,7 @@ public class ServiceStation {
 
         System.out.println("Обслуживаем " + vehicle.getModelName());
         vehicle.service();
+        System.out.println();
     }
 
 }

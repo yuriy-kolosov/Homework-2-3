@@ -1,12 +1,12 @@
-abstract class Vehicle implements VehicleService {
+abstract class Vehicle {
 
-    private String modelName = "";
+    private String modelName;
 
     private int wheelsCount;
 
-    public Vehicle(String modelName) {
+    public Vehicle(String modelName, int wheelsCount) {
         this.modelName = modelName;
-        this.wheelsCount = 0;
+        this.wheelsCount = wheelsCount;
     }
 
     public String getModelName() {
@@ -21,6 +21,10 @@ abstract class Vehicle implements VehicleService {
         this.wheelsCount = wheelsCount;
     }
 
-    public abstract void service();
+    public void service() {
+        for (int i = 0; i < wheelsCount; i++) {
+            System.out.println("Меняем покрышку");
+        }
 
+    }
 }
